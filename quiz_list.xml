@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz_list>
+  <quiz>
+    <title>Cia</title>
+    <description>Be</description>
+    <questions>
+      <question>
+        <title>Question A</title>
+      <text>Question text</text>
+      <answer correct = "false|true" number_of_options = "2-4">
+        <text>Answer</text>
+        <explanation>Brief explanation of the evaluation of the answer (Optional)</explanation>
+      </answer>
+    </question>
+
+    <question>
+      <title>Question B</title>
+      <text>Question B text</text>
+      <answer correct = "false|true" number_of_options = "2-4">
+        <text>Answer</text>
+        <explanation>
+          Brief explanation of the evaluation of the answer (Optional)
+        </explanation>
+      </answer>
+    </question>
+    </questions>
+  </quiz>
+  <quiz>
+    <title>Test try 2</title>
+    <description>Test description</description>
+    <questions>
+    </questions>
+  </quiz>
+
+</quiz_list>

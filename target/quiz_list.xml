@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz_list>
+  <quiz>
+    <title>
+      Question A
+    </title>
+    <description>
+      This is a question
+    </description>
+    <question>
+      <text>
+        Question text
+      </text>
+      <answer correct = "false|true" number_of_options = "2-4">
+        <text>
+          Answer
+        </text>
+        <explanation>
+          Brief explanation of the evaluation of the answer (Optional)
+        </explanation>
+      </answer>
+    </question>
+    <title>
+      Question B
+    </title>
+    <description>
+      This is a question
+    </description>
+    <question>
+      <text>
+        Question text
+      </text>
+      <answer correct = "false|true" number_of_options = "2-4">
+        <text>
+          Answer
+        </text>
+        <explanation>
+          Brief explanation of the evaluation of the answer (Optional)
+        </explanation>
+      </answer>
+    </question>
+  </quiz>
+</quiz_list>
