@@ -35,22 +35,35 @@ class Quiz {
     return score;
   }
 
-  public String printTags() {
-    StringBuilder string = new StringBuilder();
-    for (String tag : tags) string.append(tag);
-    return string.toString();
-  }
   public Quiz addQuestion(Question question) {
     questions.add(question);
     return this;
   }
 
+  public String getTags() {
+    StringBuilder string = new StringBuilder();
+    for (String tag : tags) {
+      string.append(tag);
+    }
+    return string.toString();
+  }
+  public String getHeader() {
+    StringBuilder string = new StringBuilder();
+    string.append("Title: " + title + "\n");
+    if (description != "") {
+      string.append("Description: " + description + "\n");
+    }
+    string.append(getTags());
+    return string.toString();
+  }
+
   @Override
   public String toString() {
     StringBuilder string = new StringBuilder();
-    string.append(String.format("Title: " + title + "\n"));
-    if (description != null) string.append(String.format("Description: " + description + "\n"));
-    for (Question question : questions) string.append(question.toString());
+    string.append(getHeader());
+    for (Question question : questions) {
+      string.append(question.toString());
+    }
     return string.toString();
   }
 
@@ -106,8 +119,8 @@ class Answer {
   public Answer(String text) {
     this.text = text;
     this.explanation = null;
-    this.correct = false
-    this.weight = 0.0
+    this.correct = false;
+    this.weight = 0.0;
   }
 
   public Answer(String text,boolean correct,double weight) {
@@ -133,6 +146,6 @@ class Answer {
   @Override
   public String toString() {
     return String.format("Text: " + text + "\nExplanation: " + explanation +
-    "\nCorrect: " + correct + "\nWeight:" + weight+"\n");
+        "\nCorrect: " + correct + "\nWeight:" + weight+"\n");
   }
 }

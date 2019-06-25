@@ -11,8 +11,7 @@ import org.jdom2.Element;
 
 class quizMaker {
   private static Quiz describeQuiz(Element quiz) {
-    Quiz q = QuizBuilder.createQuiz(quiz);
-    return q;
+    return QuizBuilder.createQuiz(quiz);
   }
   private static Document createDocument() throws JDOMException,IOException {
     SAXBuilder builder = new SAXBuilder();
@@ -22,11 +21,11 @@ class quizMaker {
   }
   public static List<Quiz> getList() {
       try {
-      List<Quiz> string_array_list = new ArrayList<Quiz>();
-      Document document = createDocument();
-      List<Element> quiz_list = document.getRootElement().getChildren();
-      for (Element quiz : quiz_list) string_array_list.add(describeQuiz(quiz));
-      return string_array_list;
+        List<Quiz> quiz_list = new ArrayList<Quiz>();
+        Document document = createDocument();
+        List<Element> element_quiz_list = document.getRootElement().getChildren();
+        for (Element quiz : element_quiz_list) quiz_list.add(describeQuiz(quiz));
+        return quiz_list;
       }
       catch (Exception e) {
         e.printStackTrace();
