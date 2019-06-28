@@ -7,7 +7,7 @@ class Quiz {
 
   private String title;
   private String description;
-  private List<String> tags;
+  private List<String> tags; // Should be Set data structure
   private List<Question> questions;
   private double score;
 
@@ -16,6 +16,13 @@ class Quiz {
     this.description = description;
     this.score = 0;
     tags = new ArrayList<String>();
+    questions = new ArrayList<Question>();
+  }
+  public Quiz(String title,String description,List<String> tags) {
+    this.title = title;
+    this.description = description;
+    this.score = 0;
+    this.tags = tags;
     questions = new ArrayList<Question>();
   }
 
@@ -94,6 +101,9 @@ class Question {
   public Question addAnswer(Answer answer) {
     answers_list.add(answer);
     return this;
+  }
+  public boolean hasAnswer() {
+    return !answers_list.isEmpty();
   }
 
   @Override
